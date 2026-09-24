@@ -1,6 +1,6 @@
 schema: osera-patch-evidence/0.1.0
 producer: moderne
-release: 2.4.18.1-osera-00003
+release: 2.4.18.1-osera-00004
 baseline: v2.4.18+patch.baseline
 fixes:
   - cve: CVE-2026-41717
@@ -17,11 +17,16 @@ fixes:
     upstream: https://nvd.nist.gov/vuln/detail/CVE-2026-41716
     artifacts:
       - org.springframework.data:spring-data-commons
-    note: New in this release; ported onto 2021.2.18; fixed at 2.7.18.1-backpatch-00003 (backpatch-spring-data-commons@cbb399a).
+    note: Carried from 2021.2.18.1-backpatch-00003; ported onto 2021.2.18; fixed at 2.7.18.1-backpatch-00003 (backpatch-spring-data-commons@cbb399a).
+  - cve: CVE-2026-41728
+    upstream: https://nvd.nist.gov/vuln/detail/CVE-2026-41728
+    artifacts:
+      - org.springframework.data:spring-data-rest-webmvc
+    note: New in this release; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00004 (backpatch-spring-data-rest@e82ce85).
 tests:
-  commit: 2da63d2f9eb5e8b420b4cbad870538e54515e51a
+  commit: f824164a261ea518adfbd6e86965df7daa3fec5a
   command: none in this repository
   runtime: none, no build or test ran for this release
   report: carried, see the evidence of the release named in the note
   result: pass
-  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00003 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00003, whose .osera/patch-evidence.yaml records the tests that ran
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00004 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00004, whose .osera/patch-evidence.yaml records the tests that ran
