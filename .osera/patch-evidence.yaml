@@ -1,0 +1,17 @@
+schema: osera-patch-evidence/0.1.0
+producer: moderne
+release: 2.4.18.1-osera-00001
+baseline: v2.4.18+patch.baseline
+fixes:
+  - cve: CVE-2026-41717
+    upstream: https://nvd.nist.gov/vuln/detail/CVE-2026-41717
+    artifacts:
+      - org.springframework.data:spring-data-mongodb
+    note: New in this release; ported onto 2021.2.18; fixed at 3.4.18.1-backpatch-00001 (backpatch-spring-data-mongodb@7ee7b5e).
+tests:
+  commit: 0be9c07f4d62c824a7d0db86ba8ee2a2f7923856
+  command: none in this repository
+  runtime: none, no build or test ran for this release
+  report: carried, see the evidence of the release named in the note
+  result: pass
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00001 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00001, whose .osera/patch-evidence.yaml records the tests that ran
